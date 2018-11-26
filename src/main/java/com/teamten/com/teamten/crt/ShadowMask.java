@@ -255,7 +255,7 @@ public class ShadowMask implements Runnable {
 
         if (mPortrait) {
             // Pre-rotate portrait setup.
-            inputImage = ImageUtils.rotate(inputImage, Math.PI/2, true);
+            inputImage = ImageUtils.rotateRight(inputImage);
         }
 
         int inputWidth = inputImage.getWidth();
@@ -282,7 +282,7 @@ public class ShadowMask implements Runnable {
 
         if (mPortrait) {
             // Pre-rotate portrait setup.
-            outputImage = ImageUtils.rotate(outputImage, -Math.PI/2, true);
+            outputImage = ImageUtils.rotateLeft(outputImage);
         }
 
         save(outputImage, mOutputPathname);
